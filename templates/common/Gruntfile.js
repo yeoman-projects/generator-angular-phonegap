@@ -11,11 +11,18 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
 
+  var yeomanConfig = {
+    app: require('./bower.json').appPath || 'app',
+    dist: 'dist'
+    phonegap: 'www'
+  };
+
   grunt.initConfig({
-    yeoman: {
-      // configurable paths
-      app: require('./bower.json').appPath || 'app',
-      dist: 'dist'
+    yeoman: yeomanConfig,
+    shell: {
+      phonegapBuild: {
+        command: 'cordova build'
+      }
     },
     watch: {
       coffee: {
@@ -100,7 +107,7 @@ module.exports = function (grunt) {
           ]
         }]
       },
-      server: '.tmp'
+      server: '.tmp',
     },
     jshint: {
       options: {
