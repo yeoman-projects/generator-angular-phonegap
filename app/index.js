@@ -165,6 +165,11 @@ Generator.prototype.askForModules = function askForModules() {
     // TODO : Add options for routing
     angMods.push("'ngRoute'");
 
+    // Force other useless for now dependencies
+    // TODO : Remove those dependencies
+    angMods.push("'ui.bootstrap'");
+    angMods.push("'LocalStorageModule'");
+
     if (angMods.length) {
       this.env.options.angularDeps = "\n  " + angMods.join(",\n  ") +"\n";
     }
