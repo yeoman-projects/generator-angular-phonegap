@@ -360,20 +360,32 @@ module.exports = function (grunt) {
     'karma'
   ]);
 
-  grunt.registerTask('build', [
-    'clean:dist',
-    'useminPrepare',
-    'concurrent:dist',
-    'autoprefixer',
-    'concat',
-    'copy:dist',
-    'cdnify',
-    'ngmin',
-    'cssmin',
-    'uglify',
-    'rev',
-    'usemin'
-  ]);
+  grunt.registerTask('build', 'build task', function(target) {
+    target = target || 'dev';
+
+    grunt.task.run([
+      'clean:dist',
+      'useminPrepare',
+      'concurrent:dist',
+      'autoprefixer',
+      'concat',
+      'copy:dist',
+      'cdnify',
+      'ngmin',
+      'cssmin',
+      'uglify',
+      'rev',
+      'usemin'
+    ]);
+
+    if (target === 'phonegap') {
+      grunt.task.run([
+        'clean:phonegap',
+        'copy:phonegap',
+        'shell:phonegapBuild'
+      ]);
+    }
+  });
 
   grunt.registerTask('default', [
     'jshint',
