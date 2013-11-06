@@ -108,6 +108,7 @@ module.exports = function (grunt) {
         }]
       },
       server: '.tmp',
+      phonegap: ['<%= yeoman.phonegap %>/*', '!<%= yeoman.phonegap %>/config.xml', '!<%= yeoman.phonegap %>/res']
     },
     jshint: {
       options: {
@@ -277,7 +278,13 @@ module.exports = function (grunt) {
         cwd: '<%%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
-      }
+      },
+      phonegap: {
+        expand: true,
+        cwd: '<%= yeoman.dist %>',
+        dest: '<%= yeoman.phonegap %>',
+        src: '**'
+      },
     },
     concurrent: {
       server: [
