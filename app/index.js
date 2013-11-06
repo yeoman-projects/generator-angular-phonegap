@@ -190,10 +190,13 @@ Generator.prototype.bootstrapFiles = function bootstrapFiles() {
   if (this.bootstrap) {
     if (!sass) {
       files.push('bootstrap.css');
+      files.push('bootstrap-theme.css');
     }
 
-    this.copy('images/glyphicons-halflings.png', 'app/images/glyphicons-halflings.png');
-    this.copy('images/glyphicons-halflings-white.png', 'app/images/glyphicons-halflings-white.png');
+    this.copy('styles/fonts/glyphicons-halflings-regular.eot', 'app/fonts/glyphicons-halflings-regular.eot');
+    this.copy('styles/fonts/glyphicons-halflings-regular.svg', 'app/fonts/glyphicons-halflings-regular.svg');
+    this.copy('styles/fonts/glyphicons-halflings-regular.ttf', 'app/fonts/glyphicons-halflings-regular.ttf');
+    this.copy('styles/fonts/glyphicons-halflings-regular.woff', 'app/fonts/glyphicons-halflings-regular.woff');
   }
 
   files.push('main.' + (sass ? 's' : '') + 'css');
