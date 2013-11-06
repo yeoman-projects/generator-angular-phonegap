@@ -161,6 +161,10 @@ Generator.prototype.askForModules = function askForModules() {
       angMods.push("'ngSanitize'");
     }
 
+    // Force ngRoute
+    // TODO : Add options for routing
+    angMods.push("'ngRoute'");
+
     if (angMods.length) {
       this.env.options.angularDeps = "\n  " + angMods.join(",\n  ") +"\n";
     }
