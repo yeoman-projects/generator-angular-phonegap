@@ -1,7 +1,7 @@
 {
-  "name": "generator-angular",
+  "name": "generator-angular-phonegap",
   "version": "0.5.1",
-  "description": "Yeoman generator for AngularJS",
+  "description": "Yeoman generator for AngularJS and phonegap",
   "keywords": [
     "yeoman-generator",
     "scaffold",

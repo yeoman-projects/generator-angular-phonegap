@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 
   var yeomanConfig = {
     app: require('./bower.json').appPath || 'app',
-    dist: 'dist'
+    dist: 'dist',
     phonegap: 'www'
   };
 
@@ -108,7 +108,7 @@ module.exports = function (grunt) {
         }]
       },
       server: '.tmp',
-      phonegap: ['<%= yeoman.phonegap %>/*', '!<%= yeoman.phonegap %>/config.xml', '!<%= yeoman.phonegap %>/res']
+      phonegap: ['<%%= yeoman.phonegap %>/*', '!<%%=yeoman.phonegap %>/config.xml', '!<%%= yeoman.phonegap %>/res']
     },
     jshint: {
       options: {
@@ -281,8 +281,8 @@ module.exports = function (grunt) {
       },
       phonegap: {
         expand: true,
-        cwd: '<%= yeoman.dist %>',
-        dest: '<%= yeoman.phonegap %>',
+        cwd: '<%%= yeoman.dist %>',
+        dest: '<%%= yeoman.phonegap %>',
         src: '**'
       },
     },

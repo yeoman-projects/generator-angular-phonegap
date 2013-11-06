@@ -2,7 +2,7 @@ Description:
     Creates a new AngularUI state
 
 Example:
-    yo angular:state thing [--coffee] [--minsafe]
+    yo angular-phonegap:state thing [--coffee] [--minsafe]
 
     This will create:
         app/scripts/controllers/thing.js

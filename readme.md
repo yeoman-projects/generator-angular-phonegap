@@ -54,7 +54,7 @@ Generates a controller and view, and configures a route in `app/scripts/app.js` 
 
 Example:
 ```bash
-yo angular:route myroute
+yo angular-phonegap:route myroute
 ```
 
 Produces `app/scripts/controllers/myroute.js`:
@@ -74,7 +74,7 @@ Generates a controller in `app/scripts/controllers`.
 
 Example:
 ```bash
-yo angular:controller user
+yo angular-phonegap:controller user
 ```
 
 Produces `app/scripts/controllers/user.js`:
@@ -88,7 +88,7 @@ Generates a directive in `app/scripts/directives`.
 
 Example:
 ```bash
-yo angular:directive myDirective
+yo angular-phonegap:directive myDirective
 ```
 
 Produces `app/scripts/directives/myDirective.js`:
@@ -109,7 +109,7 @@ Generates a filter in `app/scripts/filters`.
 
 Example:
 ```bash
-yo angular:filter myFilter
+yo angular-phonegap:filter myFilter
 ```
 
 Produces `app/scripts/filters/myFilter.js`:
@@ -126,7 +126,7 @@ Generates an HTML view file in `app/views`.
 
 Example:
 ```bash
-yo angular:view user
+yo angular-phonegap:view user
 ```
 
 Produces `app/views/user.html`:
@@ -139,7 +139,7 @@ Generates an AngularJS service.
 
 Example:
 ```bash
-yo angular:service myService
+yo angular-phonegap:service myService
 ```
 
 Produces `app/scripts/services/myService.js`:
@@ -149,14 +149,14 @@ angular.module('myMod').service('myService', function () {
 });
 ```
 
-You can also do `yo angular:factory`, `yo angular:provider`, `yo angular:value`, and `yo angular:constant` for other types of services.
+You can also do `yo angular-phonegap:factory`, `yo angular-phonegap:provider`, `yo angular-phonegap:value`, and `yo angular-phonegap:constant` for other types of services.
 
 ### Decorator
 Generates an AngularJS service decorator.
 
 Example:
 ```bash
-yo angular:decorator serviceName
+yo angular-phonegap:decorator serviceName
 ```
 
 Produces `app/scripts/decorators/serviceNameDecorator.js`:
@@ -177,7 +177,7 @@ For generators that output scripts, the `--coffee` option will output CoffeeScri
 
 For example:
 ```bash
-yo angular:controller user --coffee
+yo angular-phonegap:controller user --coffee
 ```
 
 Produces `app/scripts/controller/user.coffee`:
@@ -196,7 +196,7 @@ By default, generators produce unannotated code. Without annotations, AngularJS'
 
 #### Example
 ```bash
-yo angular:controller user --minsafe
+yo angular-phonegap:controller user --minsafe
 ```
 
 Produces `app/controller/user.js`:
@@ -236,7 +236,7 @@ By default, new scripts are added to the index.html file. However, this may not 
 
 To skip adding them to the index, pass in the skip-add argument:
 ```bash
-yo angular:service serviceName --skip-add
+yo angular-phonegap:service serviceName --skip-add
 ```
 
 ## Bower Components
