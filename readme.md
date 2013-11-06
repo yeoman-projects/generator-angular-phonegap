@@ -1,15 +1,15 @@
-# AngularJS generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-angular.png?branch=master)](http://travis-ci.org/yeoman/generator-angular)
+# AngularJS generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-angular-phonegap.png?branch=master)](http://travis-ci.org/yeoman/generator-angular-phonegap)
 
-Maintainer: [Brian Ford](https://github.com/btford)
+Maintainer: [dsimard](https://github.com/dsimard)
 
-Based on [angular-seed](https://github.com/angular/angular-seed/)
-
+Based on [generator-angular](https://github.com/yeoman/generator-angular) 
+and this [blog post](http://lucaspaulger.com/javascript/2013/09/25/Mobile-apps-Phonegap-Yeoman/)
 
 ## Usage
 
-Install `generator-angular`:
+Install `generator-angular-phonegap`:
 ```
-npm install -g generator-angular
+npm install -g generator-angular-phonegap
 ```
 
 Make a new directory, and `cd` into it:
