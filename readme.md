@@ -7,19 +7,41 @@ and this [blog post](http://lucaspaulger.com/javascript/2013/09/25/Mobile-apps-P
 
 ## Usage
 
+Make sure `phonegap` is installed:
+```
+npm install -g phonegap
+```
+
 Install `generator-angular-phonegap`:
 ```
 npm install -g generator-angular-phonegap
 ```
 
-Make a new directory, and `cd` into it:
+Create a new phonegap project and `cd` into it:
 ```
-mkdir my-new-project && cd $_
+phonegap create --name MyApp --id com.yourcompany.myapp myapp
+cd myapp
+```
+
+Add the phonegap platform you need (to see available platforms, `phonegap --help`):
+```
+cordova platform add android
 ```
 
 Run `yo angular`, optionally passing an app name:
 ```
-yo angular [app-name]
+yo angular-phonegap:app [app-name]
+```
+
+Run the local server:
+```
+grunt server
+```
+
+Build and send to emulator:
+```
+grunt build:phonegap
+cordova emulate android
 ```
 
 ## Generators
