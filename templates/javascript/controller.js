@@ -6,6 +6,7 @@ angular.module('<%= scriptAppName %>')
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma',
-      'Phonegap'
+      'Phonegap',
+      'Bootstrap 3.0.2'
     ];
   });
