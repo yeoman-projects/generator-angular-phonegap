@@ -8,8 +8,6 @@
     "angular-route": "~1.2.0",
     "angular-localstorage": "latest",
     "angular-bootstrap": "latest",
-    "sass-bootstrap": "~2.3",
-    "bootstrap-sass": "~2.3.1",
     <% } %>"es5-shim": "~2.0.8"<% if (resourceModule) { %>,
     "angular-resource": "~1.2.0"<% } %><% if (cookiesModule) { %>,
     "angular-cookies": "~1.2.0"<% } %><% if (sanitizeModule) { %>,
