@@ -1,25 +1,47 @@
-# AngularJS generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-angular.png?branch=master)](http://travis-ci.org/yeoman/generator-angular)
+# AngularJS generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-angular-phonegap.png?branch=master)](http://travis-ci.org/yeoman/generator-angular-phonegap)
 
-Maintainer: [Brian Ford](https://github.com/btford)
+Maintainer: [dsimard](https://github.com/dsimard)
 
-Based on [angular-seed](https://github.com/angular/angular-seed/)
-
+Based on [generator-angular](https://github.com/yeoman/generator-angular) 
+and this [blog post](http://lucaspaulger.com/javascript/2013/09/25/Mobile-apps-Phonegap-Yeoman/)
 
 ## Usage
 
-Install `generator-angular`:
+Make sure `phonegap` is installed:
 ```
-npm install -g generator-angular
+npm install -g phonegap
 ```
 
-Make a new directory, and `cd` into it:
+Install `generator-angular-phonegap`:
 ```
-mkdir my-new-project && cd $_
+npm install -g generator-angular-phonegap
+```
+
+Create a new phonegap project and `cd` into it:
+```
+phonegap create --name MyApp --id com.yourcompany.myapp myapp
+cd myapp
+```
+
+Add the phonegap platform you need (to see available platforms, `phonegap --help`):
+```
+cordova platform add android
 ```
 
 Run `yo angular`, optionally passing an app name:
 ```
-yo angular [app-name]
+yo angular-phonegap:app [app-name]
+```
+
+Run the local server:
+```
+grunt server
+```
+
+Build and send to emulator:
+```
+grunt build:phonegap
+cordova emulate android
 ```
 
 ## Generators
@@ -54,7 +76,7 @@ Generates a controller and view, and configures a route in `app/scripts/app.js` 
 
 Example:
 ```bash
-yo angular:route myroute
+yo angular-phonegap:route myroute
 ```
 
 Produces `app/scripts/controllers/myroute.js`:
@@ -74,7 +96,7 @@ Generates a controller in `app/scripts/controllers`.
 
 Example:
 ```bash
-yo angular:controller user
+yo angular-phonegap:controller user
 ```
 
 Produces `app/scripts/controllers/user.js`:
@@ -88,7 +110,7 @@ Generates a directive in `app/scripts/directives`.
 
 Example:
 ```bash
-yo angular:directive myDirective
+yo angular-phonegap:directive myDirective
 ```
 
 Produces `app/scripts/directives/myDirective.js`:
@@ -109,7 +131,7 @@ Generates a filter in `app/scripts/filters`.
 
 Example:
 ```bash
-yo angular:filter myFilter
+yo angular-phonegap:filter myFilter
 ```
 
 Produces `app/scripts/filters/myFilter.js`:
@@ -126,7 +148,7 @@ Generates an HTML view file in `app/views`.
 
 Example:
 ```bash
-yo angular:view user
+yo angular-phonegap:view user
 ```
 
 Produces `app/views/user.html`:
@@ -139,7 +161,7 @@ Generates an AngularJS service.
 
 Example:
 ```bash
-yo angular:service myService
+yo angular-phonegap:service myService
 ```
 
 Produces `app/scripts/services/myService.js`:
@@ -149,14 +171,14 @@ angular.module('myMod').service('myService', function () {
 });
 ```
 
-You can also do `yo angular:factory`, `yo angular:provider`, `yo angular:value`, and `yo angular:constant` for other types of services.
+You can also do `yo angular-phonegap:factory`, `yo angular-phonegap:provider`, `yo angular-phonegap:value`, and `yo angular-phonegap:constant` for other types of services.
 
 ### Decorator
 Generates an AngularJS service decorator.
 
 Example:
 ```bash
-yo angular:decorator serviceName
+yo angular-phonegap:decorator serviceName
 ```
 
 Produces `app/scripts/decorators/serviceNameDecorator.js`:
@@ -177,7 +199,7 @@ For generators that output scripts, the `--coffee` option will output CoffeeScri
 
 For example:
 ```bash
-yo angular:controller user --coffee
+yo angular-phonegap:controller user --coffee
 ```
 
 Produces `app/scripts/controller/user.coffee`:
@@ -196,7 +218,7 @@ By default, generators produce unannotated code. Without annotations, AngularJS'
 
 #### Example
 ```bash
-yo angular:controller user --minsafe
+yo angular-phonegap:controller user --minsafe
 ```
 
 Produces `app/controller/user.js`:
@@ -236,7 +258,7 @@ By default, new scripts are added to the index.html file. However, this may not 
 
 To skip adding them to the index, pass in the skip-add argument:
 ```bash
-yo angular:service serviceName --skip-add
+yo angular-phonegap:service serviceName --skip-add
 ```
 
 ## Bower Components

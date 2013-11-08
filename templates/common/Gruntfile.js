@@ -11,11 +11,18 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
 
+  var yeomanConfig = {
+    app: require('./bower.json').appPath || 'app',
+    dist: 'dist',
+    phonegap: 'www'
+  };
+
   grunt.initConfig({
-    yeoman: {
-      // configurable paths
-      app: require('./bower.json').appPath || 'app',
-      dist: 'dist'
+    yeoman: yeomanConfig,
+    shell: {
+      phonegapBuild: {
+        command: 'cordova build'
+      }
     },
     watch: {
       coffee: {
@@ -100,7 +107,8 @@ module.exports = function (grunt) {
           ]
         }]
       },
-      server: '.tmp'
+      server: '.tmp',
+      phonegap: ['<%%= yeoman.phonegap %>/*', '!<%%=yeoman.phonegap %>/config.xml', '!<%%= yeoman.phonegap %>/res']
     },
     jshint: {
       options: {
@@ -270,7 +278,13 @@ module.exports = function (grunt) {
         cwd: '<%%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
-      }
+      },
+      phonegap: {
+        expand: true,
+        cwd: '<%%= yeoman.dist %>',
+        dest: '<%%= yeoman.phonegap %>',
+        src: '**'
+      },
     },
     concurrent: {
       server: [
@@ -346,20 +360,32 @@ module.exports = function (grunt) {
     'karma'
   ]);
 
-  grunt.registerTask('build', [
-    'clean:dist',
-    'useminPrepare',
-    'concurrent:dist',
-    'autoprefixer',
-    'concat',
-    'copy:dist',
-    'cdnify',
-    'ngmin',
-    'cssmin',
-    'uglify',
-    'rev',
-    'usemin'
-  ]);
+  grunt.registerTask('build', 'build task', function(target) {
+    target = target || 'dev';
+
+    grunt.task.run([
+      'clean:dist',
+      'useminPrepare',
+      'concurrent:dist',
+      'autoprefixer',
+      'concat',
+      'copy:dist',
+      'cdnify',
+      'ngmin',
+      'cssmin',
+      'uglify',
+      'rev',
+      'usemin'
+    ]);
+
+    if (target === 'phonegap') {
+      grunt.task.run([
+        'clean:phonegap',
+        'copy:phonegap',
+        'shell:phonegapBuild'
+      ]);
+    }
+  });
 
   grunt.registerTask('default', [
     'jshint',

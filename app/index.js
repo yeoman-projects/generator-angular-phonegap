@@ -49,15 +49,15 @@ var Generator = module.exports = function Generator(args, options) {
     args.push('--minsafe');
   }
 
-  this.hookFor('angular:common', {
+  this.hookFor('angular-phonegap:common', {
     args: args
   });
 
-  this.hookFor('angular:main', {
+  this.hookFor('angular-phonegap:main', {
     args: args
   });
 
-  this.hookFor('angular:controller', {
+  this.hookFor('angular-phonegap:controller', {
     args: args
   });
 
@@ -108,9 +108,9 @@ Generator.prototype.askForBootstrap = function askForBootstrap() {
     type: 'confirm',
     name: 'compassBootstrap',
     message: 'Would you like to use the SCSS version of Twitter Bootstrap with the Compass CSS Authoring Framework?',
-    default: true,
+    default: false,
     when: function (props) {
-      return props.bootstrap;
+      return false && props.bootstrap; // TODO : Do not offer compassBootstrap
     }
   }], function (props) {
     this.bootstrap = props.bootstrap;
@@ -161,6 +161,14 @@ Generator.prototype.askForModules = function askForModules() {
       angMods.push("'ngSanitize'");
     }
 
+    // Force ngRoute
+    // TODO : Add options for routing
+    angMods.push("'ngRoute'");
+
+    // Force other useless for now dependencies
+    // TODO : Remove those dependencies
+    angMods.push("'ui.bootstrap'");
+
     if (angMods.length) {
       this.env.options.angularDeps = "\n  " + angMods.join(",\n  ") +"\n";
     }
@@ -179,12 +187,16 @@ Generator.prototype.bootstrapFiles = function bootstrapFiles() {
   var files = [];
   var source = 'styles/' + ( sass ? 's' : '' ) + 'css/';
 
-  if (this.bootstrap && !sass) {
-    files.push('bootstrap.css');
-    this.copy('fonts/glyphicons-halflings-regular.eot', 'app/fonts/glyphicons-halflings-regular.eot');
-    this.copy('fonts/glyphicons-halflings-regular.ttf', 'app/fonts/glyphicons-halflings-regular.ttf');
-    this.copy('fonts/glyphicons-halflings-regular.svg', 'app/fonts/glyphicons-halflings-regular.svg');
-    this.copy('fonts/glyphicons-halflings-regular.woff', 'app/fonts/glyphicons-halflings-regular.woff');
+  if (this.bootstrap) {
+    if (!sass) {
+      files.push('bootstrap.css');
+      files.push('bootstrap-theme.css');
+    }
+
+    this.copy('styles/fonts/glyphicons-halflings-regular.eot', 'app/fonts/glyphicons-halflings-regular.eot');
+    this.copy('styles/fonts/glyphicons-halflings-regular.svg', 'app/fonts/glyphicons-halflings-regular.svg');
+    this.copy('styles/fonts/glyphicons-halflings-regular.ttf', 'app/fonts/glyphicons-halflings-regular.ttf');
+    this.copy('styles/fonts/glyphicons-halflings-regular.woff', 'app/fonts/glyphicons-halflings-regular.woff');
   }
 
   files.push('main.' + (sass ? 's' : '') + 'css');

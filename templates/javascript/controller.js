@@ -5,6 +5,8 @@ angular.module('<%= scriptAppName %>')
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
-      'Karma'
+      'Karma',
+      'Phonegap',
+      'Bootstrap 3.0.2'
     ];
   });
