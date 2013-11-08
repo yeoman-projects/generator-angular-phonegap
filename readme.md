@@ -1,4 +1,4 @@
-# AngularJS generator [![Build Status](https://secure.travis-ci.org/yeoman/generator-angular-phonegap.png?branch=master)](http://travis-ci.org/yeoman/generator-angular-phonegap)
+# AngularJS Phonegap generator
 
 Maintainer: [dsimard](https://github.com/dsimard)
 
@@ -7,7 +7,7 @@ and this [blog post](http://lucaspaulger.com/javascript/2013/09/25/Mobile-apps-P
 
 ## Usage
 
-Make sure `phonegap` is installed:
+Make sure `phonegap` and `cordova` is installed:
 ```
 npm install -g phonegap
 ```
@@ -28,7 +28,7 @@ Add the phonegap platform you need (to see available platforms, `phonegap --help
 cordova platform add android
 ```
 
-Run `yo angular`, optionally passing an app name:
+Run `yo angular-phonegap`, optionally passing an app name:
 ```
 yo angular-phonegap:app [app-name]
 ```
@@ -48,18 +48,18 @@ cordova emulate android
 
 Available generators:
 
-* [angular](#app) (aka [angular:app](#app))
-* [angular:controller](#controller)
-* [angular:directive](#directive)
-* [angular:filter](#filter)
-* [angular:route](#route)
-* [angular:service](#service)
-* [angular:provider](#service)
-* [angular:factory](#service)
-* [angular:value](#service)
-* [angular:constant](#service)
-* [angular:decorator] (#decorator)
-* [angular:view](#view)
+* [angular-phonegap](#app) (aka [angular-phonegap:app](#app))
+* [angular-phonegap:controller](#controller)
+* [angular-phonegap:directive](#directive)
+* [angular-phonegap:filter](#filter)
+* [angular-phonegap:route](#route)
+* [angular-phonegap:service](#service)
+* [angular-phonegap:provider](#service)
+* [angular-phonegap:factory](#service)
+* [angular-phonegap:value](#service)
+* [angular-phonegap:constant](#service)
+* [angular-phonegap:decorator] (#decorator)
+* [angular-phonegap:view](#view)
 
 **Note: Generators are to be run from the root directory of your app.**
 

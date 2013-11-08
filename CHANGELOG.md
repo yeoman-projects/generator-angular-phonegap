@@ -1,4 +1,42 @@
 <a name="v0.5.1"></a>
+### v0.5.1 (2013-11-08)
+
+
+#### Bug Fixes
+
+* angular-phonegap instead of angular, corrected GruntFile ([7f877bb5](http://github.com/yeoman/generator-angular/commit/7f877bb5d18b85fe5b3c54593ffa1c716c5c245d))
+* **bootstrap:**
+  * appropriately add bootstrap 3.0.2 ([bbd80886](http://github.com/yeoman/generator-angular/commit/bbd8088647800f7b0037d60ab82afb70f131fa1b))
+  * appropriately add bootstrap 3.0.2 ([2155f127](http://github.com/yeoman/generator-angular/commit/2155f127cf0f7fb444da8c170d2e5a76ebec57d2))
+* **docs:** Add coffeescript=false to readme ([abd7dc38](http://github.com/yeoman/generator-angular/commit/abd7dc38be0cf511307c784f30d59c9fdcaea3e2))
+* **styles:** update path to icon images ([8daad4f2](http://github.com/yeoman/generator-angular/commit/8daad4f2de9dbde4fcc810527da7c9607e1db8d4))
+
+
+#### Features
+
+* update usage in readme ([13a7a82a](http://github.com/yeoman/generator-angular/commit/13a7a82a498c60f22c1d1737428a8b4adbf34b83))
+* reformat default page ([906d92f5](http://github.com/yeoman/generator-angular/commit/906d92f53214ee332cebfbd144be5e2f6db1b345))
+* use bootstrap 3.0.2 ([83970413](http://github.com/yeoman/generator-angular/commit/839704134c6c460025f10795807ef6c9c8588b2c))
+* Do not offer bootstrap compass ([86fba8e6](http://github.com/yeoman/generator-angular/commit/86fba8e69260b11da791be026fb55ce5baf2c1b8))
+* improve welcome page ([a268f0d5](http://github.com/yeoman/generator-angular/commit/a268f0d51fe5ccecd3a1f3d4f04b6fcfba84ef53))
+* **app:** upgrade to Bootstrap 3.0.1 ([59f4b1ba](http://github.com/yeoman/generator-angular/commit/59f4b1ba73842b758174ad44a7da60af4f4db63f))
+* **bootstrap:** Use responsive bootstrap 2.3.2 ([758d4fa4](http://github.com/yeoman/generator-angular/commit/758d4fa4fac4524395fafc112565edb502675379))
+* **bower:**
+  * add other angular dependencies ([79c52155](http://github.com/yeoman/generator-angular/commit/79c521551e041710146587f5ea2c947999a3e54d))
+  * use angular ~1.2.0 ([3efefd47](http://github.com/yeoman/generator-angular/commit/3efefd475114c183fa4f6fa5bd0ec88b2b53f612))
+* **gen:**
+  * allow app names to have custom suffix ([09f0f7b3](http://github.com/yeoman/generator-angular/commit/09f0f7b3a8c3264b7527bc9fed8c709becec99eb))
+  * add option to not add to index ([486ee146](http://github.com/yeoman/generator-angular/commit/486ee14660ac51b7cfcb4b7de50135833954f193))
+* **grunt:** add grunt-shell for building phonegap ([e86e5b58](http://github.com/yeoman/generator-angular/commit/e86e5b58ccdc168c90060e140c1106711e123a45))
+* **gruntfile:**
+  * build for phonegap ([b899612f](http://github.com/yeoman/generator-angular/commit/b899612ffbad7e8f018fb551092f96acebe77f83))
+  * add copy and clean commands for phonegap ([38270d1d](http://github.com/yeoman/generator-angular/commit/38270d1d62824d545a809cbbaa8785b1ce078fd3))
+* **index:**
+  * add new dependencies for angular app ([c4a9fd12](http://github.com/yeoman/generator-angular/commit/c4a9fd128f4afb82d5aa6443b7cf102e9724f2bf))
+  * force angular-route ([f5b513d4](http://github.com/yeoman/generator-angular/commit/f5b513d4799e7de2728edc67bd82fbff0dceacac))
+  * reference the new bower components ([280553ac](http://github.com/yeoman/generator-angular/commit/280553ac3f805e6267e23b052bfc689fc5e1b7b5))
+
+<a name="v0.5.1"></a>
 ### v0.5.1 (2013-10-22)
 
 
