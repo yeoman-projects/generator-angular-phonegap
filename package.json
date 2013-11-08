@@ -8,11 +8,16 @@
     "framework",
     "component",
     "front-end",
-    "app"
+    "app",
+    "phonegap"
   ],
-  "homepage": "https://github.com/yeoman/generator-angular",
-  "bugs": "https://github.com/yeoman/generator-angular/issues",
+  "homepage": "https://github.com/dsimard/generator-angular-phonegap",
+  "bugs": "https://github.com/dsimard/generator-angular-phonegap/issues",
   "author": "Chrome Developer Relations",
+  "contributors": [{
+    "name": "dsimard", 
+    "email":"dsimard@azanka.ca"
+    }],
   "main": "app/index.js",
   "repository": {
     "type": "git",
