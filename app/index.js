@@ -222,19 +222,9 @@ Generator.prototype.bootstrapJS = function bootstrapJS() {
   }
 
   // Wire Twitter Bootstrap plugins
+  this.copy('scripts/bootstrap.js', 'app/scripts/bootstrap.js');
   this.indexFile = this.appendScripts(this.indexFile, 'scripts/plugins.js', [
-    'bower_components/sass-bootstrap/js/affix.js',
-    'bower_components/sass-bootstrap/js/alert.js',
-    'bower_components/sass-bootstrap/js/button.js',
-    'bower_components/sass-bootstrap/js/carousel.js',
-    'bower_components/sass-bootstrap/js/collapse.js',
-    'bower_components/sass-bootstrap/js/dropdown.js',
-    'bower_components/sass-bootstrap/js/modal.js',
-    'bower_components/sass-bootstrap/js/popover.js',
-    'bower_components/sass-bootstrap/js/scrollspy.js',
-    'bower_components/sass-bootstrap/js/tab.js',
-    'bower_components/sass-bootstrap/js/tooltip.js',
-    'bower_components/sass-bootstrap/js/transition.js',
+    'scripts/bootstrap.js'
   ]);
 };
 
