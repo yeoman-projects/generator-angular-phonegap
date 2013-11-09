@@ -5,6 +5,8 @@ Maintainer: [dsimard](https://github.com/dsimard)
 Based on [generator-angular](https://github.com/yeoman/generator-angular) 
 and this [blog post](http://lucaspaulger.com/javascript/2013/09/25/Mobile-apps-Phonegap-Yeoman/)
 
+Video : [Create an angular-phonegap project in 6 commands](http://www.youtube.com/watch?v=UXkLu7q4tq4)
+
 ## Usage
 
 Make sure `phonegap` and `cordova` is installed:
