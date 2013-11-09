@@ -1,3 +1,17 @@
+<a name="v0.5.2"></a>
+### v0.5.2 (2013-11-09)
+
+
+#### Bug Fixes
+
+* index requires phonegap.js so plugins can work properly ([5f372c6d](http://github.com/yeoman/generator-angular/commit/5f372c6dc6e162c01702d64091a97b7e73c585e5))
+* **bower:** remove useless bootstrap sass stuff ([9d859929](http://github.com/yeoman/generator-angular/commit/9d859929861157a67db0086c2d747f3fbeafe1f5))
+
+
+#### Features
+
+* use bootstrap.js packaged in the zip ([eb61c6dd](http://github.com/yeoman/generator-angular/commit/eb61c6dd71b1728a31d3939d570173308fa00b1e))
+
 <a name="v0.5.1"></a>
 ### v0.5.1 (2013-11-08)
 
