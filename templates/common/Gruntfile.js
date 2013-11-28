@@ -29,6 +29,10 @@ module.exports = function (grunt) {
         files: ['<%%= yeoman.app %>/scripts/{,*/}*.coffee'],
         tasks: ['coffee:dist']
       },
+      jade: {
+        files: ['<%= yeoman.app %>/{,*/}*.jade'],
+        tasks: ['jade:dist']
+      },
       coffeeTest: {
         files: ['test/spec/{,*/}*.coffee'],
         tasks: ['coffee:test']
@@ -47,7 +51,7 @@ module.exports = function (grunt) {
         },
         files: [
           '<%%= yeoman.app %>/{,*/}*.html',
-          '.tmp/styles/{,*/}*.css',
+          '{.tmp,<%= yeoman.app %>}/{,*/}*.html',
           '{.tmp,<%%= yeoman.app %>}/scripts/{,*/}*.js',
           '<%%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -119,6 +123,20 @@ module.exports = function (grunt) {
         'Gruntfile.js',
         '<%%= yeoman.app %>/scripts/{,*/}*.js'
       ]
+    },
+    jade: {
+      options: {
+        pretty: true
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/',
+          src: '{,*/}*.jade',
+          dest: '.tmp/',
+          ext: '.html'
+        }]
+      }
     },
     coffee: {
       options: {
@@ -243,9 +261,14 @@ module.exports = function (grunt) {
         },
         files: [{
           expand: true,
-          cwd: '<%%= yeoman.app %>',
-          src: ['*.html', 'views/*.html'],
-          dest: '<%%= yeoman.dist %>'
+          cwd: '<%= yeoman.app %>',
+          src: ['{,**}/*.html'],
+          dest: '<%= yeoman.dist %>'
+        },{
+          expand: true,
+          cwd: '.tmp/',
+          src: ['{,**}/*.html'],
+          dest: '<%= yeoman.dist %>'
         }]
       }
     },
@@ -287,9 +310,10 @@ module.exports = function (grunt) {
       },
     },
     concurrent: {
-      server: [
+      server: [        
         'coffee:dist',<% if (compassBootstrap) { %>
         'compass:server',<% } %>
+        'jade:dist',
         'copy:styles'
       ],
       test: [
@@ -366,6 +390,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:dist',
       'useminPrepare',
+      'jade',
       'concurrent:dist',
       'autoprefixer',
       'concat',
