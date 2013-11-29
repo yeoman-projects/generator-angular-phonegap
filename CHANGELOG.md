@@ -1,4 +1,12 @@
 <a name="v0.5.3"></a>
+### v0.5.3 (2013-11-28)
+
+
+#### Features
+
+* add jade ([c6fc18ad](http://github.com/yeoman/generator-angular/commit/c6fc18ad446af21fe52838577cc0c93b0a65fdae), closes [#2](http://github.com/yeoman/generator-angular/issues/2))
+
+<a name="v0.5.3"></a>
 ### v0.5.3 (2013-11-09)
 
 

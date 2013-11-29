@@ -23,7 +23,7 @@
   "main": "app/index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/yeoman/generator-angular.git"
+    "url": "git@github.com:dsimard/generator-angular-phonegap.git"
   },
   "scripts": {
     "test": "mocha"
