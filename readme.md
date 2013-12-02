@@ -1,5 +1,22 @@
 # AngularJS Phonegap generator
 
+## WARNING
+
+I realize that this project will be hell to maintain. 
+The current release will be the last one. I'm sorry to everyone who
+already built on it. 
+
+I'm currently working on a grunt file that will
+be compatible with 
+[yeoman/generator-angular](https://github.com/yeoman/generator-angular)
+and will do the same things than this project.
+
+__ The new project is available here : [dsimard/grunt-angular-phonegap](https://github.com/dsimard/grunt-angular-phonegap) __
+
+Contact me at <dsimard@azanka.ca> if you need
+help to switch to the new project.
+
+
 Maintainer: [dsimard](https://github.com/dsimard)
 
 Based on [generator-angular](https://github.com/yeoman/generator-angular) 

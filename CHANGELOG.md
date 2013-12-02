@@ -1,3 +1,11 @@
+<a name="v0.5.4"></a>
+### v0.5.4 (2013-11-29)
+
+
+#### Bug Fixes
+
+* update repository.url in package.json ([ec92bb90](git@github.com:dsimard/generator-angular-phonegap/commit/ec92bb90f6236eecf6b80371fa261245e0626641), closes [#4](git@github.com:dsimard/generator-angular-phonegap/issues/4))
+
 <a name="v0.5.3"></a>
 ### v0.5.3 (2013-11-28)
 
